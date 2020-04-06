@@ -9,12 +9,16 @@ mass_module = [136583,77036,109200,142168,74357,146941,129306,98180,105195,
 70575,134177,116233,113954,52829,123860, 128020, 126718, 144463, 140192, 
 143461]
 
-i = 0
+mass_of_each_module = 0
 fuel = 0
+incremental_fuel = 0
+extra_mass = 0
 
 for mass in mass_module:
-    i = (mass//3) - 2
-    print (i)
-    fuel += i
-
-print(fuel)
+    mass_of_each_module = (mass//3) - 2
+    fuel += mass_of_each_module
+    extra_mass = mass_of_each_module
+    while ((extra_mass//3)-2)> 0:
+        incremental_fuel += ((extra_mass//3)-2)
+        extra_mass = ((extra_mass//3)-2)
+print(fuel+incremental_fuel)
