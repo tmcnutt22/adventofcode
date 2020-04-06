@@ -20,5 +20,5 @@ for mass in mass_module:
     extra_mass = mass_of_each_module
     while ((extra_mass//3)-2)> 0:
         incremental_fuel += ((extra_mass//3)-2)
-        extra_mass = ((extra_mass//3)-2)
-print(fuel+incremental_fuel)
+        extra_mass = ((extra_mass//3)-2)    
+print (fuel+incremental_fuel)
